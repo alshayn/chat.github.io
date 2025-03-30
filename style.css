@@ -79,7 +79,8 @@ button {
   padding: 8px 16px;
   color: #000000;
   /* align-self: flex-start; */
-  max-width: 70%;
+  /* max-width: 70%; */
+  margin-right: auto;
 }
 
 .footer {
@@ -110,6 +111,7 @@ button {
   justify-content: center;
   border-radius: 4px;
   padding: 12px 15px;
+  cursor: pointer;
 }
 
 .start {
