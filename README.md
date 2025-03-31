@@ -1,2 +1,2 @@
 # chat.github.io
-# [text](https://alshayn.github.io/chat.github.io/)
+# [chat](https://alshayn.github.io/chat.github.io/)
