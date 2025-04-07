@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/chat.github.io/static/css/main.b4d0a19c.css",
+    "main.css": "/chat.github.io/static/css/main.dd8c199c.css",
     "main.js": "/chat.github.io/static/js/main.6a455915.js",
     "index.html": "/chat.github.io/index.html",
-    "main.b4d0a19c.css.map": "/chat.github.io/static/css/main.b4d0a19c.css.map",
+    "main.dd8c199c.css.map": "/chat.github.io/static/css/main.dd8c199c.css.map",
     "main.6a455915.js.map": "/chat.github.io/static/js/main.6a455915.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4d0a19c.css",
+    "static/css/main.dd8c199c.css",
     "static/js/main.6a455915.js"
   ]
 }
