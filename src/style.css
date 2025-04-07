@@ -58,12 +58,14 @@ button {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   padding: 12px 32px;
+  flex-shrink: 0;
 }
 
 .header.with-border {
@@ -73,9 +75,10 @@ button {
 .content {
   flex: 1;
   background: #F9FAFB;
-  overflow-y: hidden;
+  overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  height: calc(100vh - 120px); /* Вычитаем примерную высоту хедера и футера */
 }
 
 .content.white-bg {
@@ -93,8 +96,9 @@ button {
   padding-bottom: 27px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 27px;
+  min-height: 100%;
 }
 
 .message-user {
@@ -135,6 +139,9 @@ button {
 
 .footer {
   position: relative;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  z-index: 1;
 }
 
 .footer.with-border {
@@ -333,5 +340,41 @@ button {
   .dialog {
     padding-top: 16px;
     padding-bottom: 20px;
+  }
+}
+
+/* Очень маленькие экраны (iPhone SE и подобные) */
+@media screen and (max-width: 375px) {
+  .content {
+    height: calc(100vh - 100px); /* Меньшая высота для маленьких экранов */
+  }
+
+  .header {
+    padding: 4px;
+    min-height: 36px;
+  }
+
+  .dialog {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    gap: 4px;
+    padding-bottom: 16px;
+  }
+
+  .footer {
+    min-height: 36px;
+  }
+
+  .form {
+    padding: 4px;
+    gap: 4px;
+    min-height: 36px;
+  }
+
+  .message-user,
+  .message-assistant {
+    max-width: 95%;
+    font-size: 12px;
+    padding: 6px 10px;
   }
 }
