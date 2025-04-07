@@ -9,7 +9,7 @@
 
 @keyframes slideInRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(20px);
     opacity: 0;
   }
   to {
@@ -20,7 +20,7 @@
 
 @keyframes slideInLeft {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-20px);
     opacity: 0;
   }
   to {
@@ -38,6 +38,15 @@ body {
 input {
   box-shadow: none;
   display: block;
+  width: 752px;
+  height: 46px;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 12px 48px 12px 16px;
+  font-size: 14px;
+  -webkit-text-size-adjust: 100%;
+  transform: scale(1);
+  transform-origin: left top;
 }
 
 button {
@@ -62,9 +71,11 @@ button {
 }
 
 .content {
-  height: 100%;
+  flex: 1;
   background: #F9FAFB;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .content.white-bg {
@@ -97,6 +108,7 @@ button {
   word-wrap: break-word;
   opacity: 0;
   transform: translateX(100%);
+  will-change: transform, opacity;
 }
 
 .message-user.visible {
@@ -114,6 +126,7 @@ button {
   word-wrap: break-word;
   opacity: 0;
   transform: translateX(-100%);
+  will-change: transform, opacity;
 }
 
 .message-assistant.visible {
@@ -148,14 +161,6 @@ button {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 16px;
-}
-
-.input {
-  width: 752px;
-  height: 46px;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
-  padding: 12px 48px 12px 16px;
 }
 
 .button {
@@ -259,6 +264,7 @@ button {
   .input {
     width: 100%;
     order: 1;
+    font-size: 12px;
   }
 
   .button {
@@ -282,6 +288,7 @@ button {
     padding-top: 16px;
     padding-bottom: 16px;
     gap: 16px;
+    padding-bottom: 60px;
   }
 
   .centered-form {
@@ -313,6 +320,7 @@ button {
   .input {
     height: 40px;
     padding: 8px 12px;
+    font-size: 12px;
   }
 
   .message-user,
@@ -320,5 +328,10 @@ button {
     max-width: 95%;
     font-size: 12px;
     padding: 6px 10px;
+  }
+
+  .dialog {
+    padding-top: 16px;
+    padding-bottom: 20px;
   }
 }
